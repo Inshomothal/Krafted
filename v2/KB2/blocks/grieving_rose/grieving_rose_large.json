@@ -45,7 +45,7 @@
       "minecraft:destroy_time": 0,
       "minecraft:loot": "loot_tables/blocks/grieving_rose/grieving_rose_large.json",
       "minecraft:on_interact": {
-        "condition": "q.get_equipped_item_name=='bone_meal'",
+        "condition": "q.is_item_equipped=='bone_meal'",
         "event": "fertilize_block"
       }
     },

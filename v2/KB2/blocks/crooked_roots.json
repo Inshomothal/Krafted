@@ -11,13 +11,13 @@
         "group": "itemGroup.name.none",
         "category": "none"
       },
-    	"minecraft:destroy_time": 0.0,
+      "minecraft:destroy_time": 0.0,
       "minecraft:block_light_absorption": 0.0,
       "minecraft:geometry": "geometry.cross",
       "minecraft:breathability": "air",
       "minecraft:loot": "loot_tables/no_drops.json",
       "minecraft:on_player_destroyed": {
-        "condition": "query.get_equipped_item_name('main_hand') == 'shears'",
+        "condition": "query.is_item_equipped('main_hand') == 'shears'",
         "event": "honkit26113:broken"
       },
       "minecraft:placement_filter": {
@@ -38,16 +38,16 @@
               "honkit26113:glow_mycelium",
               "honkit26113:deepslate_glow_mycelium"
             ],
-            "allowed_faces": [ "up" ]
+            "allowed_faces": ["up"]
           }
         ]
       },
       "minecraft:pick_collision": {
-        "origin":  [-5.5, 0, -5.5],
-        "size":    [11, 4, 11]
+        "origin": [-5.5, 0, -5.5],
+        "size": [11, 4, 11]
       },
       "minecraft:entity_collision": false,
-      "minecraft:material_instances" : {
+      "minecraft:material_instances": {
         "*": {
           "texture": "crooked_roots",
           "render_method": "alpha_test",
