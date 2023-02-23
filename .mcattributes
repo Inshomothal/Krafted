@@ -1,1 +1,5 @@
 diagnostic.disable.behaviorpack.mcfunction.missing=true
+diagnostic.disable.behaviorpack.entity.component.missing=true
+diagnostic.disable.behaviorpack.entity.component.missing=true
+diagnostic.disable.resourcepack.model.missing=true
+diagnostic.disable.molang.query.unknown=true

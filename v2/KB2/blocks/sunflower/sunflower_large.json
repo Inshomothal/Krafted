@@ -4,11 +4,7 @@
     "description": {
       "identifier": "ff:sunflower_large",
       "properties": {
-        "ff:upper_bit": [
-          0,
-          1,
-          2
-        ]
+        "ff:upper_bit": [0, 1, 2]
       }
     },
     "permutations": [
@@ -17,16 +13,8 @@
         "components": {
           "tag:flower_bottom": {},
           "minecraft:pick_collision": {
-            "origin": [
-              -3.5,
-              0,
-              -3.5
-            ],
-            "size": [
-              7,
-              16,
-              7
-            ]
+            "origin": [-3.5, 0, -3.5],
+            "size": [7, 16, 7]
           },
           "minecraft:loot": "loot_tables/blocks/sunflower/sunflower_large.json"
         }
@@ -47,16 +35,8 @@
             "event": "destroy_middle"
           },
           "minecraft:pick_collision": {
-            "origin": [
-              -3.5,
-              0,
-              -3.5
-            ],
-            "size": [
-              7,
-              16,
-              7
-            ]
+            "origin": [-3.5, 0, -3.5],
+            "size": [7, 16, 7]
           }
         }
       },
@@ -76,16 +56,8 @@
             "event": "destroy_top"
           },
           "minecraft:pick_collision": {
-            "origin": [
-              -3.5,
-              0,
-              -3.5
-            ],
-            "size": [
-              7,
-              10,
-              7
-            ]
+            "origin": [-3.5, 0, -3.5],
+            "size": [7, 10, 7]
           }
         }
       }
@@ -95,9 +67,7 @@
       "minecraft:placement_filter": {
         "conditions": [
           {
-            "allowed_faces": [
-              "up"
-            ],
+            "allowed_faces": ["up"],
             "block_filter": [
               "minecraft:grass",
               "minecraft:dirt",
@@ -125,7 +95,7 @@
       "minecraft:block_light_absorption": 0,
       "minecraft:destroy_time": 0,
       "minecraft:on_interact": {
-        "condition": "q.get_equipped_item_name=='bone_meal'",
+        "condition": "q.is_item_equipped=='bone_meal'",
         "event": "fertilize_block"
       },
       "minecraft:on_placed": {
@@ -166,11 +136,7 @@
           {
             "condition": "query.block_property('ff:upper_bit') == 0",
             "set_block_at_pos": {
-              "block_offset": [
-                0,
-                1,
-                0
-              ],
+              "block_offset": [0, 1, 0],
               "block_type": "ff:sunflower_large"
             }
           }
@@ -181,11 +147,7 @@
           {
             "condition": "query.block_property('ff:upper_bit') == 0",
             "set_block_at_pos": {
-              "block_offset": [
-                0,
-                2,
-                0
-              ],
+              "block_offset": [0, 2, 0],
               "block_type": "ff:sunflower_large"
             }
           }
@@ -213,9 +175,7 @@
         },
         "decrement_stack": {},
         "run_command": {
-          "command": [
-            "particle minecraft:crop_growth_emitter ~ ~ ~"
-          ]
+          "command": ["particle minecraft:crop_growth_emitter ~ ~ ~"]
         }
       }
     }

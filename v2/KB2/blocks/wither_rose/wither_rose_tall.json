@@ -4,10 +4,7 @@
     "description": {
       "identifier": "ff:wither_rose_tall",
       "properties": {
-        "ff:upper_bit": [
-          0,
-          1
-        ]
+        "ff:upper_bit": [0, 1]
       }
     },
     "permutations": [
@@ -18,16 +15,8 @@
             "event": "destroy_top"
           },
           "minecraft:pick_collision": {
-            "origin": [
-              -3.5,
-              0,
-              -3.5
-            ],
-            "size": [
-              7,
-              16,
-              7
-            ]
+            "origin": [-3.5, 0, -3.5],
+            "size": [7, 16, 7]
           },
           "minecraft:loot": "loot_tables/blocks/wither_rose/wither_rose_tall.json"
         }
@@ -48,16 +37,8 @@
             "event": "destroy_bottom"
           },
           "minecraft:pick_collision": {
-            "origin": [
-              -3.5,
-              0,
-              -3.5
-            ],
-            "size": [
-              7,
-              10,
-              7
-            ]
+            "origin": [-3.5, 0, -3.5],
+            "size": [7, 10, 7]
           }
         }
       }
@@ -68,9 +49,7 @@
       "minecraft:placement_filter": {
         "conditions": [
           {
-            "allowed_faces": [
-              "up"
-            ],
+            "allowed_faces": ["up"],
             "block_filter": [
               "minecraft:grass",
               "minecraft:dirt",
@@ -101,7 +80,7 @@
       "minecraft:block_light_absorption": 0,
       "minecraft:destroy_time": 0,
       "minecraft:on_interact": {
-        "condition": "q.get_equipped_item_name=='bone_meal'",
+        "condition": "q.is_item_equipped=='bone_meal'",
         "event": "fertilize_block"
       },
       "minecraft:on_placed": {
@@ -130,11 +109,7 @@
           {
             "condition": "!query.block_property('ff:upper_bit') == 1",
             "set_block_at_pos": {
-              "block_offset": [
-                0,
-                1,
-                0
-              ],
+              "block_offset": [0, 1, 0],
               "block_type": "ff:wither_rose_tall"
             }
           }
@@ -147,9 +122,7 @@
       },
       "destroy_bottom": {
         "run_command": {
-          "command": [
-            "fill ~ ~-1 ~ ~ ~-1 ~ air 0 destroy"
-          ]
+          "command": ["fill ~ ~-1 ~ ~ ~-1 ~ air 0 destroy"]
         }
       },
       "fertilize_block": {
@@ -158,9 +131,7 @@
         },
         "decrement_stack": {},
         "run_command": {
-          "command": [
-            "particle minecraft:crop_growth_emitter ~ ~ ~"
-          ]
+          "command": ["particle minecraft:crop_growth_emitter ~ ~ ~"]
         }
       }
     }

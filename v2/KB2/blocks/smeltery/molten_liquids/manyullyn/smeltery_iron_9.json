@@ -98,7 +98,7 @@
 			"strat:bucket": {
 				"sequence": [
 					{
-						"condition": "query.get_equipped_item_name('main_hand') != 'bucket' && query.get_equipped_item_name('main_hand') != 'copper_can'",
+						"condition": "query.is_item_equipped('main_hand') != 'bucket' && query.is_item_equipped('main_hand') != 'copper_can'",
 						"run_command": {
 							"command": [
 								"title @s actionbar Smeltery:
@@ -108,7 +108,7 @@
 						}
 					},
 					{
-						"condition": "query.get_equipped_item_name('main_hand') == 'bucket'",
+						"condition": "query.is_item_equipped('main_hand') == 'bucket'",
 						"sequence": [
 							{
 								"decrement_stack": {},
@@ -133,7 +133,7 @@
 						]
 					},
 					{
-						"condition": "query.get_equipped_item_name('main_hand') == 'copper_can'",
+						"condition": "query.is_item_equipped('main_hand') == 'copper_can'",
 						"sequence": [
 							{
 								"decrement_stack": {},

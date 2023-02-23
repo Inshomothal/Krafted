@@ -72,8 +72,16 @@
       "minecraft:block_light_absorption": 0,
       "minecraft:destroy_time": 0,
       "minecraft:on_interact": {
-        "condition": "q.get_equipped_item_name=='bone_meal'",
-        "event": "fertilize_block"
+        "parallel": [
+          {
+            "condition": "q.is_item_equipped=='bone_meal'",
+            "event": "fertilize_block"
+          },
+          {
+            "condition": "q.is_item_equipped=='water_bucket'",
+            "event": "destroy_field"
+          }
+        ]
       },
       "minecraft:on_placed": { "event": "check_for_bottom" }
     },
@@ -111,6 +119,14 @@
         "decrement_stack": {},
         "run_command": {
           "command": ["particle minecraft:crop_growth_emitter ~ ~ ~"]
+        }
+      },
+      "destroy_field": {
+        "die": {
+          "target": {
+            "has_tag": "flower",
+            "distance_to_nearest_player": 15.0
+          }
         }
       }
     }

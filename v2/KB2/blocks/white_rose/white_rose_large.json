@@ -39,13 +39,15 @@
       "minecraft:destroy_time": 0,
       "minecraft:loot": "loot_tables/blocks/white_rose/white_rose_large.json",
       "minecraft:on_interact": {
-        "condition": "q.get_equipped_item_name=='bone_meal'",
+        "condition": "q.is_item_equipped=='bone_meal'",
         "event": "fertilize_block"
       }
     },
     "events": {
       "fertilize_block": {
-        "spawn_loot": { "table": "loot_tables/blocks/white_rose/white_rose_large.json" },
+        "spawn_loot": {
+          "table": "loot_tables/blocks/white_rose/white_rose_large.json"
+        },
         "decrement_stack": {},
         "run_command": {
           "command": ["particle minecraft:crop_growth_emitter ~ ~ ~"]
